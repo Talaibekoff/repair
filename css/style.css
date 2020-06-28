@@ -15,7 +15,8 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
   margin: 0;
 }
 
@@ -53,6 +54,11 @@ img {
   background-color: #ffd200;
   border: none;
   padding: 18px 30px;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .navbar {
@@ -94,6 +100,7 @@ img {
 
 .navbar__button {
   margin-left: 30px;
+  font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
 
@@ -102,6 +109,7 @@ img {
   margin-top: 10px;
   color: #333333;
   font-size: 20px;
+  font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
   text-decoration: none;
 }
@@ -150,12 +158,14 @@ img {
 .hero__title {
   margin-bottom: 37px;
   font-size: 41px;
-  font-weight: 700;
   line-height: 55px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
-.hero__description {
+.hero__subtitle {
   font-size: 20px;
+  font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
 
@@ -172,7 +182,6 @@ img {
           flex-direction: column;
   list-style: none;
   font-size: 14px;
-  font-weight: 400;
   line-height: 24px;
 }
 
@@ -214,7 +223,7 @@ img {
     font-size: 30px;
     line-height: 45px;
   }
-  .hero__description {
+  .hero__subtitle {
     font-size: 16px;
   }
   .hero__features {
@@ -254,7 +263,7 @@ img {
     line-height: 30px;
     letter-spacing: -0.3px;
   }
-  .hero__description {
+  .hero__subtitle {
     display: block;
     max-width: 250px;
     font-size: 16px;
