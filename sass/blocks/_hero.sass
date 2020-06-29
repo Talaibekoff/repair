@@ -1,6 +1,6 @@
 .hero
   padding: 50px 0
-  background-color: $section-color
+  background-color: $secondary
   color: $text-color
   &-block
     display: flex
@@ -29,6 +29,8 @@
       height: 40px
       display: inline-flex
       align-items: center
+      &:last-child
+        margin-bottom: 0
   &__list-1
     background: url(../img/list-1.png) no-repeat
   &__list-2
@@ -54,8 +56,6 @@
       margin-bottom: 0
       & li
         margin-bottom: 20px
-        &:last-child
-          margin-bottom: 0
 
 @media ( max-width: 768px )
   .hero

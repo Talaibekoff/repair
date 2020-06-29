@@ -1,0 +1,80 @@
+.offer
+  background: url('../img/offer/offer-bg.png') no-repeat
+  background-size: contain
+  background-position: center right
+  position: relative
+  &::before
+    content: ""
+    width: 50%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background-color: #fff
+  &-block
+    width: 50%
+    padding-right: 90px
+    position: relative
+  &__title
+    max-width: 360px
+    margin-bottom: 24px
+  &__subtitle
+    max-width: 250px
+    margin-bottom: 30px
+  &__input
+    margin-bottom: 30px
+    width: 240px
+    &:first-child
+      margin-right: 10px
+  &__button
+    width: 100%
+    min-height: 60px
+    margin-bottom: 31px
+  &-call
+    display: flex
+    justify-content: space-between
+    font-size: 15px
+    line-height: 24px
+    &__item
+      width: 230px
+    &__num
+      +bold
+      text-decoration: none
+      color: inherit
+
+@media ( max-width: 1200px )
+  .offer
+    background-size: cover
+    &-block
+      padding-right: 40px
+    &__input
+      width: 100%
+      margin-bottom: 10px
+    &__button
+      font-size: 13px
+    &-call
+      display: block
+
+@media ( max-width: 768px )
+  .offer
+    background: #ffffff
+    &-block
+      width: 100%
+      padding: 0 10%
+    &__title
+      max-width: 450px
+  .section
+    padding: 34px 0
+
+@media ( max-width: 567px )
+  .offer
+    &-block
+      padding: 0
+    &__title
+      font-size: 18px
+      line-height: 21px
+      margin-bottom: 18px
+    &__subtitle
+      margin-bottom: 25px
+      font-size: 14px
+  

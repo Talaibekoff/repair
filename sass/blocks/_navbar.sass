@@ -15,6 +15,18 @@
   &__button
     margin-left: 30px
     +bold
+    &::after
+      content: ""
+      display: block
+      height: 2px
+      background-color: #000000
+      transition: .2s
+      width: 0%
+    &:hover
+      background-color: lighten($main-color, 10%)
+      &::after
+        width: 100%
+        
   &__phone
     display: inline-block
     margin-top: 10px
