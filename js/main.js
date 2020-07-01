@@ -10,3 +10,9 @@ button.addEventListener('click', function () {
 close.addEventListener('click', function () {
     modal.classList.remove('modal_active');
 });
+
+
+// Добавил таймер закрытия модального окна через 5 секунд, Хз как, но получилось
+setTimeout(() => {
+    modal.classList.remove('modal_active');
+}, 5000);
