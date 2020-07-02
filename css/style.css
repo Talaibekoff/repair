@@ -484,3 +484,67 @@ img {
   top: 0;
   right: 0;
 }
+
+.modal-dialog__title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modal__form {
+  text-align: center;
+}
+
+.modal__input {
+  margin-bottom: 30px;
+  width: 90%;
+  font-size: 14px;
+}
+
+.modal__input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 1pt orange;
+          box-shadow: 0 0 0 1pt orange;
+}
+
+.modal__button {
+  width: 90%;
+  font-size: 14px;
+}
+
+.success {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.success_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.success-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  width: 90%;
+  min-width: 200px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.success-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.success-dialog__title {
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+}
