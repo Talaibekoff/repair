@@ -9,6 +9,8 @@ $(document).ready(function () {
     var success = $('#success'); //Объявил переменную success
     var closeSuccess = $('#close-success'); //Объявил переменную closeSuccess
 
+    var scrollToTop = $('#scroll-to-top');
+
     /* При клике на button, к модальному окну 
     присваивается класс-модификатор modal_active */
     button.on('click', function () { // on - отслеживание действия "клик"
@@ -35,9 +37,16 @@ $(document).ready(function () {
         }, 5000); // В милисекундах
     });
 
+    //Удаление класса-модификатора при клике на крестик
     closeSuccess.on('click', function () {
-        success.removeClass('success_active');
+        success.removeClass('success_active'); 
     });
+
+    //При клике на кнопку страница откручивается вверх
+    scrollToTop.on('click', function () {
+        $('html, body').animate({scrollTop: 0}, 500);
+    });
+
 
 
 });

@@ -39,6 +39,7 @@ img
     font-size: 24px
     line-height: 35px
     +bold
+    text-align: center
   &-subtitle
     display: block
     font-size: 16px
@@ -49,3 +50,27 @@ img
   padding: 20px 0 20px 26px
   font-size: 15px
   color: $border-text
+
+.scroll-to-top
+  position: fixed
+  right: 5%
+  bottom: 10%
+  margin: 0 auto
+  padding: 10px 30px
+  border-radius: 20px
+  background-color: $main-color
+  font-size: 15px
+  +bold
+  cursor: pointer
+  transition: .1s
+  opacity: .7
+  &:hover
+    background-color: $scroll-color
+    opacity: 1
+  &:active
+    background-color: $main-color
+
+.arrows
+  &__left,
+  &__right
+    cursor: pointer
