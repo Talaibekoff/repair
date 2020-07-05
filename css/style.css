@@ -78,6 +78,7 @@ img {
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
   text-align: center;
+  max-width: 700px;
 }
 
 .section-subtitle {
@@ -390,6 +391,7 @@ img {
 .offer__subtitle {
   max-width: 250px;
   margin-bottom: 30px;
+  text-align: left;
 }
 
 .offer__input {
@@ -587,8 +589,10 @@ img {
 }
 
 .portfolio__title {
-  max-width: 500px;
   margin: 0 auto 100px;
+  font-size: 30px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .portfolio__arrows {
@@ -608,4 +612,152 @@ img {
 
 .slick-dots {
   overflow: hidden;
+}
+
+@media (max-width: 567px) {
+  .portfolio__title {
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0 auto 50px;
+  }
+  .portfolio__arrows {
+    margin: 35px auto 0;
+  }
+}
+
+.price-title {
+  margin: auto;
+  margin-bottom: 58px;
+  font-size: 30px;
+}
+
+.price-subtitle {
+  text-align: center;
+  font-size: 20px;
+}
+
+.price__card {
+  margin: 0 auto 30px;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+.card__image {
+  display: block;
+}
+
+.card__img {
+  position: relative;
+}
+
+.card__img::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffd200), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover .card__img:before {
+  opacity: 1;
+}
+
+.card__text {
+  padding: 40px;
+}
+
+.card__title {
+  margin-top: 0;
+}
+
+.card__link {
+  display: inline-block;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333333;
+  position: relative;
+}
+
+.card__link:hover::after {
+  height: 12px;
+}
+
+.card__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffd200;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .price__card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .price__card {
+    margin: 0 auto 30px;
+  }
+}
+
+@media (max-width: 567px) {
+  .price {
+    padding-top: 50px;
+  }
+  .price-title {
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .price-subtitle {
+    font-size: 14px;
+  }
+  .card__text {
+    padding: 20px;
+  }
+  .card__title {
+    font-size: 14px;
+  }
+  .card__subtitle {
+    font-size: 16px;
+  }
 }

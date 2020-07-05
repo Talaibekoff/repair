@@ -2,8 +2,9 @@
   background: $secondary url('../img/portfolio/portfolio-pattern.jpg') repeat-y center left
   background-size: 50%
   &__title
-    max-width: 500px
     margin: 0 auto 100px
+    font-size: 30px
+    +bold
   &__arrows
     max-width: 120px
     display: flex
@@ -16,3 +17,12 @@
 .slick
   &-dots
     overflow: hidden
+
+@media ( max-width: 567px )
+  .portfolio
+    &__title
+      font-size: 18px
+      line-height: 23px
+      margin: 0 auto 50px
+    &__arrows
+      margin: 35px auto 0
