@@ -977,3 +977,67 @@ img {
     font-size: 12px;
   }
 }
+
+.warranty {
+  padding-top: 43px;
+}
+
+.warranty-title {
+  margin-bottom: 100px;
+}
+
+.warranty-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.warranty__item {
+  width: 30%;
+  max-width: 270px;
+}
+
+.warranty__text {
+  max-width: 280px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 41px auto 44px;
+}
+
+@media (max-width: 1200px) {
+  .warranty-title {
+    margin-bottom: 50px;
+    font-size: 28px;
+    line-height: 20px;
+  }
+  .warranty__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .warranty-title {
+    font-size: 18px;
+    margin-bottom: 43px;
+  }
+  .warranty-inner {
+    display: block;
+  }
+  .warranty__item {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .warranty__text {
+    margin: 31px auto 44px;
+    max-width: 220px;
+    font-size: 14px;
+  }
+}
