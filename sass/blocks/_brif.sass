@@ -1,0 +1,102 @@
+.brif
+  background-image: url('../img/brif/brif-color-bg.png'), url('../img/brif/brif-bg.jpg')
+  background-position: left center, center right
+  background-size: 50%, contain
+  background-repeat: repeat-y, no-repeat
+  &-block
+    display: flex
+  &__interview
+    flex-basis: 50%
+  &__form
+    flex-basis: 50%
+    padding-left: 200px
+    text-align: center
+  &__input
+    width: 100%
+    max-width: 370px
+    margin-bottom: 15px
+  &__button
+    margin-top: 15px
+    margin-bottom: 30px
+    height: 70px
+    width: 100%
+    max-width: 370px
+
+.interview
+  padding-right: 70px
+  &__title
+    margin-bottom: 50px
+    font-size: 22px
+    +bold
+    line-height: 33px
+  &__subtitle
+    display: block
+    margin-bottom: 95px
+    font-size: 16px
+  &-list
+    list-style: none
+    padding: 0
+    &__item
+      display: flex
+      margin-bottom: 25px
+      align-items: center
+      +bold
+    &__counter
+      display: inline-block
+      margin-right: 30px
+      width: 35px
+      height: 35px
+      border: 2px solid $text-color
+      border-radius: 50%
+      font-size: 14px
+      text-align: center
+      line-height: 35px
+    &__text
+      max-width: 400px
+
+.form
+  &__title
+    margin-bottom: 50px
+    font-size: 22px
+    +bold
+    line-height: 33px
+  &__subtitle
+    display: block
+    margin-bottom: 50px
+    font-size: 16px
+  &__description
+    display: block
+
+
+@media ( max-width: 1200px )
+  .brif
+    &__form
+      padding-left: 30px
+  .interview
+    padding-right: 30px
+    &__title
+      font-size: 20px
+      margin-bottom: 15px
+    &__subtitle
+      margin-bottom: 40px
+    &-list
+      &__text
+        font-size: 14px
+        max-width: 300px
+      &__counter
+        margin-right: 20px
+  .form
+    &__title
+      font-size: 20px
+    &__subtitle
+      margin-bottom: 40px
+
+@media ( max-width: 768px )
+  .brif
+    background-position: top center, center bottom
+    background-size: 100% 45%, cover
+    background-repeat: repeat-x, no-repeat
+    &-block
+      flex-direction: column
+    &__form
+      margin-top: 60px
