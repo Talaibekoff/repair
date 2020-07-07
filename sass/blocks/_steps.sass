@@ -1,0 +1,62 @@
+.steps
+  padding-top: 32px
+  &__title
+    margin-bottom: 59px
+  &__subtitle
+    margin-bottom: 60px
+  &-inner
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: baseline
+  &__item
+    width: 15%
+    text-align: center
+    position: relative
+  &__img
+    padding: 33px
+    border: 3px solid $main-color
+    border-radius: 50%
+    &-circle
+      padding: 33px 37px
+      border-radius: 50%
+      border: 3px solid $main-color
+  &-arrow
+    position: absolute
+    top: -11px
+    left: 175px
+  &__text
+    font-size: 14px
+    line-height: 20px
+
+@media ( max-width: 1200px )
+  .steps
+    &-inner
+      justify-content: center
+    &__item
+      width: 33%
+      margin-bottom: 20px
+    &-arrow
+      display: none
+
+
+@media ( max-width: 567px )
+  .steps
+    padding-top: 0
+    &-inner
+      display: block      
+    &__item
+      display: block
+      width: 130px
+      max-width: 100%
+      margin: 29px auto
+    &__title
+      font-size: 18px
+      line-height: 20px
+      margin-bottom: 27px
+    &__subtitle
+      font-size: 14px
+      margin-bottom: 34px
+    &__text
+      font-size: 12px
+    
