@@ -333,9 +333,10 @@
                <div class="form brif__form">
                   <h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
                   <span class="form__subtitle">Для этого заполните форму ниже</span>
-                  <form action="#">
-                     <input type="text" class="input brif__input" placeholder="Ваше имя">
-                     <input type="tel" class="input brif__input" placeholder="Ваш телефон">
+                  <form action="#" id="brif-form">
+                     <input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
+                     <input type="tel" name="phone" id="brif-phone" class="input brif__input" placeholder="Ваш телефон">
+                     <input type="email" name="email" class="input brif__input" placeholder="Ваш email">
                      <button class="button brif__button">Узнать стоимость</button>
                      <span class="form__description">Мы перезвоним Вам в течение 60 секунд</span>
                   </form>
@@ -348,6 +349,46 @@
       </section>
       <!-- /.section brif -->
    </main>
+
+   <footer class="footer">
+      <div class="map" id="map">
+         <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa64da9a72d550d9655e840885fe7be206621e98cdf3e10a75ff991e901710b8b&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
+      </div>
+      <!-- /.map -->
+      <div class="container">
+         <div class="contacts-block">
+            <div class="contacts">
+               <h3 class="contacts__title">Приезжайте к нам в гости! Проконсультируем Вас по всем вопросам ремонта</h3>
+               <!-- /.contacts__title -->
+               <ul class="contacts-list">
+                  <li class="contacts-list__item">
+                     <span class="contacts-list__icon"><img src="img/footer/icon-1.png" alt=""></span> 
+                     <span class="contacts-list__text">г. Москва<br>
+                     ул. Ленинга, д. 10,<br>
+                     корпус 2, оф. 308</span> 
+                  </li>
+                  <li class="contacts-list__item">
+                     <span class="contacts-list__icon"><img src="img/footer/icon-2.png" alt=""></span> 
+                     <span class="contacts-list__text">Режим работы:<br>
+                     с 9:00 до 18:00</span> 
+                  </li>
+                  <li class="contacts-list__item">
+                     <span class="contacts-list__icon"><img src="img/footer/icon-3.png" alt=""></span> 
+                     <span class="contacts-list__text">Телефон:<br>
+                     <a href="tel+7(495)42-251-31">+ 7 (495) 42-251-31</a></span> 
+                  </li>
+                  <!-- /.contacts-list__item -->
+               </ul>
+               <!-- /.contacts-list -->
+            </div>
+            <!-- /.contacts -->
+         </div>
+         <!-- /.contacts-block -->
+      </div>
+      <!-- /.container -->
+   </footer>
+   <!-- /.footer -->
 
    <div class="modal" id="modal">
       <div class="modal-dialog">
@@ -386,12 +427,35 @@
    <script src="js/modal.js"></script>
    <script src="js/slick.min.js"></script>
    <script src="js/wow.min.js"></script>
+   <script src="js/jquery.validate.min.js"></script>
+   <script src="js/jquery.maskedinput.min.js"></script>
    <script>
       // Скрипт wow.min.js
       new WOW().init();
 
-      // Скрипт слайдера
       $(document).ready(function(){
+      // Валидация формы
+      $('#brif-form').validate({
+         rules: {
+            username: "required",
+            phone: "required",
+            email: {
+               required: true,
+               email: true
+            }
+         },
+         messages: {
+            username: "Укажите ваше имя, пожалуйста!",
+            phone: "Укажите правильный телефон!",
+            email: "Укажите существующую почту!"
+         }
+      });
+
+      jQuery(function ($) {
+         $("#brif-phone").mask("0999 99-99-99")
+      });
+
+      // Скрипт слайдера
          $('.slider').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
